@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TrigCalc</string>
+    <string name="item_exit">Выход</string>
+</resources>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+    <EditText
+        android:id="@+id/Vvod"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="23dp"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/P"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/Sin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="13dp"
+        android:onClick="onButtonClick"
+        android:text="Sin"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Cos"
+        app:layout_constraintEnd_toStartOf="@+id/Cos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Cos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="onButtonClick"
+        android:text="Cos"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Ctg"
+        app:layout_constraintEnd_toStartOf="@+id/Lg"
+        app:layout_constraintStart_toEndOf="@+id/Sin" />
+
+    <Button
+        android:id="@+id/Tg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="14dp"
+        android:onClick="onButtonClick"
+        android:text="Tg"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Ctg"
+        app:layout_constraintEnd_toStartOf="@+id/Ctg"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Log"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        android:onClick="onButtonClick"
+        android:text="Log(2)"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Ctg"
+        app:layout_constraintEnd_toStartOf="@+id/Grad"
+        app:layout_constraintStart_toEndOf="@+id/Ctg" />
+
+    <Button
+        android:id="@+id/znak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="33dp"
+        android:onClick="onSmenaClick"
+        android:text="±"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/Clear"
+        app:layout_constraintStart_toEndOf="@+id/Lg"
+        app:layout_constraintTop_toBottomOf="@+id/P" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="94dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="7dp"
+        android:text="X = "
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Vvod"
+        app:layout_constraintEnd_toStartOf="@+id/Vvod"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="98dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="54dp"
+        android:text="Result:"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/P"
+        app:layout_constraintEnd_toStartOf="@+id/Vyvod"
+        app:layout_constraintStart_toEndOf="@+id/Vvod"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Vyvod"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="56dp"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="37dp"
+        android:onClick="onClearClick"
+        android:text="C"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/znak"
+        app:layout_constraintTop_toBottomOf="@+id/E" />
+
+    <Button
+        android:id="@+id/Grad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="11dp"
+        android:onClick="onCheckClick"
+        android:text="Deg"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Gradus"
+        app:layout_constraintEnd_toStartOf="@+id/Rad"
+        app:layout_constraintStart_toEndOf="@+id/Log" />
+
+    <Button
+        android:id="@+id/Rad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="11dp"
+        android:onClick="onCheckClick"
+        android:text="Rad"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Radian"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Grad" />
+
+    <Button
+        android:id="@+id/P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="onStuticClick"
+        android:text="π"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/E"
+        app:layout_constraintStart_toStartOf="@+id/Vyvod"
+        app:layout_constraintTop_toBottomOf="@+id/Vyvod" />
+
+    <Button
+        android:id="@+id/Ctg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="94dp"
+        android:onClick="onButtonClick"
+        android:text="Ctg"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Log"
+        app:layout_constraintStart_toEndOf="@+id/Tg"
+        app:layout_constraintTop_toBottomOf="@+id/Vvod" />
+
+    <Button
+        android:id="@+id/Lg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="157dp"
+        android:onClick="onButtonClick"
+        android:text="Log(10)"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Cos"
+        app:layout_constraintEnd_toStartOf="@+id/znak"
+        app:layout_constraintStart_toEndOf="@+id/Cos" />
+
+    <Button
+        android:id="@+id/E"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="onStuticClick"
+        android:text="e"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Vyvod"
+        app:layout_constraintStart_toStartOf="@+id/Clear"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Gradus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="17dp"
+        android:checked="false"
+        android:text="Gradus"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Grad" />
+
+    <CheckBox
+        android:id="@+id/Radian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:checked="false"
+        android:text="Radian"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Rad" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:text="Trigonometric Calculator"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/znak"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Ctg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
